@@ -36,7 +36,7 @@ export class ServerlessApiLambdaDynamodbStack extends cdk.Stack {
     hello.addMethod('GET');
     
     // -- CloudFormation Outputs --
-    new cdk.CfnOutput(this, 'LbDns', {
+    new cdk.CfnOutput(this, 'ApiGatewayEndpoint', {
       value: apigGw.url ?? "There's something wrong with deploy"
     })
   }
