@@ -15,7 +15,7 @@ export class ServerlessApiLambdaDynamodbStack extends cdk.Stack {
     const myDynamoLambda = new lambda.Function(this, 'MyDynamoLambda', {
       runtime: lambda.Runtime.NODEJS_12_X,
       code: lambda.Code.fromAsset('lib/lambda'),
-      handler: "function.handler",
+      handler: "index.handler",
       environment: {
         HELLO_TABLE_NAME: table.tableName,
       }
