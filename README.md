@@ -1,8 +1,15 @@
-# Welcome to your CDK TypeScript project!
+# API GW + Lambda + DynamoDB
 
-This is a blank project for TypeScript development with CDK.
+This project implements connection to API Gateway to Lambda and creation of DynamoDB Table. There's no CRUD yet for Lambda to DynamoDB.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Deployment steps
+Below are the steps to deploy the use case:
+
+```
+npm run build
+cdk bootstrap
+cdk deploy
+```
 
 ## Useful commands
 
