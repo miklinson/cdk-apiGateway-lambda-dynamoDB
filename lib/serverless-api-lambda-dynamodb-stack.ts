@@ -35,6 +35,5 @@ export class ServerlessApiLambdaDynamodbStack extends cdk.Stack {
 
     const hello = apigGw.root.addResource('hello');
     hello.addMethod('GET');
-  
   }
 }
