@@ -1,7 +1,8 @@
-#*.js
+*.js
 !jest.config.js
 *.d.ts
 node_modules
+!lib/lambda/*.js
 
 # CDK asset staging directory
 .cdk.staging
