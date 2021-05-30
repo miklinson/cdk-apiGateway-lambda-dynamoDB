@@ -29,15 +29,12 @@ export class ServerlessApiLambdaDynamodbStack extends cdk.Stack {
     // API Gateway
     const apigGw = new apigateway.LambdaRestApi(this, 'dynamoLambdaApi', {
       handler: myDynamoLambda,
-      proxy: false
+      proxy: false,
+      endpointExportName: "ApiGatewayEndpoint"
     });
 
     const hello = apigGw.root.addResource('hello');
     hello.addMethod('GET');
-    
-    // -- CloudFormation Outputs --
-    new cdk.CfnOutput(this, 'ApiGatewayEndpoint', {
-      value: apigGw.url ?? "There's something wrong with deploy"
-    })
+  
   }
 }
